@@ -6,6 +6,13 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+
+	  <!-- Отключить предупреждения о nullability -->
+	  <NoWarn>$(NoWarn);CS8600;CS8602;CS8603;CS8604;CS8618;CS8625</NoWarn>
+	  <!-- Отключить предупреждения о неиспользуемых переменных -->
+	  <NoWarn>$(NoWarn);CS0168;CS0219;CS0414</NoWarn>
+	  <!-- Отключить предупреждения о платформенной совместимости -->
+	  <NoWarn>$(NoWarn);CA1416</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

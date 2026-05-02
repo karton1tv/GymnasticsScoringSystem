@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GymnasticsScoringSystem.WPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8870e145b882adfa101dd03f2a1ad471e84bf0b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54acb64cfdd0d3e0c83edc3ffa286e271b00fede")]
 [assembly: System.Reflection.AssemblyProductAttribute("GymnasticsScoringSystem.WPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GymnasticsScoringSystem.WPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
