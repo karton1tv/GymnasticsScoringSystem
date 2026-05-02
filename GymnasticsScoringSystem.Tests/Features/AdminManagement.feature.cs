@@ -29,9 +29,9 @@ namespace GymnasticsScoringSystem.Tests.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Управление составом судей и сессиями", "  Как модератор соревнований\r\n  Я хочу создавать учетные записи судей и управлять" +
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Управление составом судей и сессиями", ("  Как модератор соревнований\r\n  Я хочу создавать учетные записи судей и управлять" +
                 " этапами оценивания\r\n  Чтобы обеспечить прозрачный и регламентировный процесс су" +
-                "действа", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+                "действа"), global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
 #line 1 "AdminManagement.feature"
 #line hidden
@@ -179,8 +179,8 @@ namespace GymnasticsScoringSystem.Tests.Features
     await testRunner.ThenAsync("система должна отклонить операцию", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
 #line 23
-    await testRunner.AndAsync("отобразить сообщение об ошибке регистрации \"Пользователь с таким именем уже сущес" +
-                        "твует\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+    await testRunner.AndAsync(("отобразить сообщение об ошибке регистрации \"Пользователь с таким именем уже сущес" +
+                        "твует\""), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 24
     await testRunner.AndAsync("не изменять файл пользователей", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");

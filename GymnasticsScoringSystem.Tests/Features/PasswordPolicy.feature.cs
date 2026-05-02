@@ -29,8 +29,8 @@ namespace GymnasticsScoringSystem.Tests.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Политика безопасности паролей", "  Как администратор системы\r\n  Я хочу контролировать надежность паролей пользоват" +
-                "елей\r\n  Чтобы предотвратить несанкционированный доступ к системе судейства", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Политика безопасности паролей", ("  Как администратор системы\r\n  Я хочу контролировать надежность паролей пользоват" +
+                "елей\r\n  Чтобы предотвратить несанкционированный доступ к системе судейства"), global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
 #line 1 "PasswordPolicy.feature"
 #line hidden

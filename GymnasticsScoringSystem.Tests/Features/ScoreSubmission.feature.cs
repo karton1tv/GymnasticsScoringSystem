@@ -29,8 +29,8 @@ namespace GymnasticsScoringSystem.Tests.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Ввод и валидация оценок судьями", "  Как судья бригады\r\n  Я хочу вводить оценки за выступление команды\r\n  Чтобы сист" +
-                "ема корректно рассчитывала средний балл и проверяла консенсус", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Ввод и валидация оценок судьями", ("  Как судья бригады\r\n  Я хочу вводить оценки за выступление команды\r\n  Чтобы сист" +
+                "ема корректно рассчитывала средний балл и проверяла консенсус"), global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
 #line 1 "ScoreSubmission.feature"
 #line hidden

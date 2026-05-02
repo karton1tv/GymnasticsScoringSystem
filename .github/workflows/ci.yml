@@ -7,55 +7,16 @@ on:
     branches: [ main, master ]
 
 jobs:
+  # ==========================================================
+  # СТАДИЯ 1: test (Сборка, тесты, покрытие)
+  # ==========================================================
   test:
     runs-on: windows-latest
     steps:
-      - name:   Скачать код
+      - name: Скачать код
         uses: actions/checkout@v4
 
-      - name:  Установить .NET 8
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-
-      - name:  Скачать библиотеки
-        run: dotnet restore
-
-      - name:  Собрать решение
-        run: dotnet build --no-restore --configuration Release
-
-      - name:  Запустить тесты
-        run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal --filter "FullyQualifiedName!~UiAutomationTests"
-
-  integration:
-    runs-on: windows-latest
-    needs: test
-    steps:
-      - name:   Скачать код
-        uses: actions/checkout@v4
-
-      - name:  Установить .NET 8
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-
-      - name:  Скачать библиотеки
-        run: dotnet restore
-
-      - name:  Собрать решение
-        run: dotnet build --no-restore --configuration Release
-
-      - name:  Интеграционные тесты
-        run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal --filter "FullyQualifiedName!~UiAutomationTests"
-
-  report:
-    runs-on: windows-latest
-    needs: integration
-    steps:
-      - name:   Скачать код
-        uses: actions/checkout@v4
-
-      - name:  Установить .NET 8
+      - name: Установить .NET 8
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
@@ -66,12 +27,96 @@ jobs:
       - name: Собрать решение
         run: dotnet build --no-restore --configuration Release
 
-      - name: Тесты с покрытием
-        run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --collect:"XPlat Code Coverage" --results-directory ./coverage --filter "FullyQualifiedName!~UiAutomationTests"
+      - name: Запустить тесты с покрытием (исключая UI-тесты)
+        run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage --filter "FullyQualifiedName!~UiAutomationTests"
 
-      - name: Сохранить отчёт
+      - name: Установить ReportGenerator
+        run: dotnet tool install --global dotnet-reportgenerator-globaltool
+
+      - name: Сгенерировать HTML-отчёт о покрытии
+        run: reportgenerator -reports:./coverage/**/coverage.cobertura.xml -targetdir:./coverage-report -reporttypes:Html
+
+      - name: Сохранить отчёт как артефакт
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage-report
-          path: ./coverage/
+          path: ./coverage-report/
+        if: always()
+
+      - name: Проверить порог покрытия (70%)
+        run: |
+          # Извлекаем процент покрытия из XML-отчёта
+          $xml = [xml](Get-Content ./coverage/**/coverage.cobertura.xml)
+          $lineRate = $xml.coverage.line-rate
+          $coveragePercent = [math]::Round($lineRate * 100, 2)
+          
+          Write-Host "Покрытие кода: $coveragePercent%"
+          
+          # Если покрытие меньше 70% — падаем с ошибкой
+          if ($coveragePercent -lt 70) {
+            Write-Error "Покрытие кода ($coveragePercent%) ниже порога 70%!"
+            exit 1
+          }
+          Write-Host "Покрытие кода соответствует порогу!"
+        shell: pwsh
+
+  # ==========================================================
+  # СТАДИЯ 2: integration (Интеграционные тесты)
+  # ==========================================================
+  integration:
+    runs-on: windows-latest
+    needs: test
+    steps:
+      - name: Скачать код
+        uses: actions/checkout@v4
+
+      - name: Установить .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Скачать библиотеки
+        run: dotnet restore
+
+      - name: Собрать решение
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Запустить интеграционные тесты (исключая UI-тесты)
+        run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal --filter "FullyQualifiedName!~UiAutomationTests"
+
+  # ==========================================================
+  # СТАДИЯ 3: report (Публикация отчётов)
+  # ==========================================================
+  report:
+    runs-on: windows-latest
+    needs: integration
+    steps:
+      - name: Скачать код
+        uses: actions/checkout@v4
+
+      - name: Установить .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Скачать библиотеки
+        run: dotnet restore
+
+      - name: Собрать решение
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Запустить тесты с покрытием для финального отчёта
+        run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --collect:"XPlat Code Coverage" --results-directory ./coverage --filter "FullyQualifiedName!~UiAutomationTests"
+
+      - name: Установить ReportGenerator
+        run: dotnet tool install --global dotnet-reportgenerator-globaltool
+
+      - name: Сгенерировать финальный HTML-отчёт
+        run: reportgenerator -reports:./coverage/**/coverage.cobertura.xml -targetdir:./coverage-report-final -reporttypes:Html
+
+      - name: Сохранить финальный отчёт как артефакт
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-coverage-report
+          path: ./coverage-report-final/
         if: always()

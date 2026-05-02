@@ -76,5 +76,11 @@
     "Username": "test_judge_639133157842176723",
     "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
     "Role": 1
+  },
+  {
+    "Id": 14,
+    "Username": "test_judge_639133188809580791",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
   }
 ]

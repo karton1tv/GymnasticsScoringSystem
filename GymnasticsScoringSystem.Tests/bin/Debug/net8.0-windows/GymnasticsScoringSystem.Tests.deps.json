@@ -16,14 +16,14 @@
           "Microsoft.NET.Test.Sdk": "17.8.0",
           "Reqnroll.MsTest": "2.2.0",
           "Reqnroll.Tools.MsBuild.Generation": "2.2.0",
-          "coverlet.collector": "6.0.0",
+          "coverlet.collector": "10.0.0",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
         "runtime": {
           "GymnasticsScoringSystem.Tests.dll": {}
         }
       },
-      "coverlet.collector/6.0.0": {},
+      "coverlet.collector/10.0.0": {},
       "Cucumber.CucumberExpressions/17.1.0": {
         "runtime": {
           "lib/netstandard2.0/CucumberExpressions.dll": {
@@ -583,7 +583,7 @@
         },
         "runtime": {
           "GymnasticsScoringSystem.WPF.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -604,12 +604,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "coverlet.collector/6.0.0": {
+    "coverlet.collector/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tW3lsNS+dAEII6YGUX/VMoJjBS1QvsxqJeqLaJXub08y1FSjasFPtQ4UBUsudE9PNrzLjooClMsPtY2cZLdXpQ==",
-      "path": "coverlet.collector/6.0.0",
-      "hashPath": "coverlet.collector.6.0.0.nupkg.sha512"
+      "sha512": "sha512-WFejCcOUR6k8UYyDnnR6Gk+obFYMsWrZuNqPJnsVFGVhpPSN0y20D4qbdKJnXinYGx9PQ397Hf9TnU1NBST8vA==",
+      "path": "coverlet.collector/10.0.0",
+      "hashPath": "coverlet.collector.10.0.0.nupkg.sha512"
     },
     "Cucumber.CucumberExpressions/17.1.0": {
       "type": "package",
