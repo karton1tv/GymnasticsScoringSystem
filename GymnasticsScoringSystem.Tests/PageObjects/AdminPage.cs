@@ -1,9 +1,11 @@
 ﻿using FlaUI.Core.AutomationElements;
 using FlaUI.UIA3;
+using System.Runtime.Versioning;
 using System.Threading;
 
 namespace GymnasticsScoringSystem.Tests.PageObjects
 {
+    [SupportedOSPlatform("windows")]
     public class AdminPage
     {
         private readonly UIA3Automation _automation;

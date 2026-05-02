@@ -6,10 +6,12 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 using GymnasticsScoringSystem.Tests.PageObjects;
+using System.Runtime.Versioning;
 
 namespace GymnasticsScoringSystem.Tests
 {
     [TestClass]
+    [SupportedOSPlatform("windows")]
     public class UiAutomationTests
     {
         private Process _appProcess;

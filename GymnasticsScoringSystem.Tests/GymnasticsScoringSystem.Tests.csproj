@@ -13,6 +13,8 @@
 	  <!-- Для Reqnroll: включить генерацию кода -->
 	<GenerateSpecFlowCodeBehind>true</GenerateSpecFlowCodeBehind>
 	<SpecFlowGenerateTests>true</SpecFlowGenerateTests>
+
+	  <NoWarn>$(NoWarn);CA1416</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
