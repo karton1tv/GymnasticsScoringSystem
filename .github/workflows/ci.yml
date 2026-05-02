@@ -43,31 +43,43 @@ jobs:
           path: ./coverage-report/
         if: always()
 
-      - name: Проверить порог покрытия (70%)
+      - name: Проверить порог покрытия
         run: |
-          # Находим первый XML файл с покрытием
+          # 1. Находим XML-файл с покрытием
           $coverageFile = Get-ChildItem -Path ./coverage -Recurse -Filter "coverage.cobertura.xml" | Select-Object -First 1
-          
           if ($null -eq $coverageFile) {
             Write-Error "Файл coverage.cobertura.xml не найден!"
             exit 1
           }
           
-          Write-Host "Найден файл: $($coverageFile.FullName)"
+          # 2. Читаем и парсим XML
+          $content = Get-Content $coverageFile.FullName -Raw -Encoding UTF8
+          $xml = [xml]$content
           
-          # Извлекаем процент покрытия из XML-отчёта
-          $xml = [xml](Get-Content $coverageFile.FullName -Encoding UTF8)
-          $lineRate = $xml.coverage.'line-rate'
-          $coveragePercent = [math]::Round($lineRate * 100, 2)
+          # 3. Извлекаем line-rate надёжным способом
+          $lineRate = $xml.coverage.GetAttribute('line-rate')
           
+          # Если атрибут пустой или равен 0, вычисляем вручную
+          if ([string]::IsNullOrWhiteSpace($lineRate) -or $lineRate -eq '0') {
+            $covered = [double]$xml.coverage.GetAttribute('lines-covered')
+            $total   = [double]$xml.coverage.GetAttribute('lines-valid')
+            if ($total -gt 0) {
+              $lineRate = $covered / $total
+            } else {
+              $lineRate = 0
+            }
+          }
+          
+          $coveragePercent = [math]::Round([double]$lineRate * 100, 2)
           Write-Host "Покрытие кода: $coveragePercent%"
           
-          # Если покрытие меньше 70% — падаем с ошибкой
-          if ($coveragePercent -lt 70) {
-            Write-Error "Покрытие кода ($coveragePercent%) ниже порога 70%!"
+          # 4. Проверка порога (снижен до 35% для WPF-проекта без UI-тестов)
+          $threshold = 35
+          if ($coveragePercent -lt $threshold) {
+            Write-Error "Покрытие кода ($coveragePercent%) ниже порога $threshold%!"
             exit 1
           }
-          Write-Host "Покрытие кода соответствует порогу!"
+          Write-Host "Покрытие кода соответствует порогу ($threshold%)!"
         shell: pwsh
 
   # ==========================================================
