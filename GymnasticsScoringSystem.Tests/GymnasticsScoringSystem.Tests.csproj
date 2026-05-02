@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <StartupObject></StartupObject>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <!-- Для Reqnroll -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+	  <!-- Для Reqnroll: включить генерацию кода -->
+	<GenerateSpecFlowCodeBehind>true</GenerateSpecFlowCodeBehind>
+	<SpecFlowGenerateTests>true</SpecFlowGenerateTests>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="FlaUI.Core" Version="4.0.0" />
+    <PackageReference Include="FlaUI.UIA3" Version="4.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+    <!-- Reqnroll вместо SpecFlow -->
+    <PackageReference Include="Reqnroll.MsTest" Version="2.2.0" />
+    <PackageReference Include="Reqnroll.Tools.MsBuild.Generation" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GymnasticsScoringSystem.WPF\GymnasticsScoringSystem.WPF.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+  </ItemGroup>
+
+</Project>

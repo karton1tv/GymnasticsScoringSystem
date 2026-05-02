@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "Username": "admin",
+    "PasswordHash": "a44ca5d29f6dab4320ab986479fa985b2d584b11a7da934f7e80bb1449913a07",
+    "Role": 0
+  },
+  {
+    "Id": 2,
+    "Username": "judge1",
+    "PasswordHash": "114d075c6ca11ca0a371a7292cb8a304ae23626481607e13fd845fac7bfc059c",
+    "Role": 1
+  },
+  {
+    "Id": 3,
+    "Username": "judge2",
+    "PasswordHash": "44626f6b299a1eb76db0f9c4ab79af4fa6aa7c413bfcebd312b38da03957f6f4",
+    "Role": 1
+  },
+  {
+    "Id": 4,
+    "Username": "test_judge_639125050170196733",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
+  },
+  {
+    "Id": 5,
+    "Username": "test_judge_639125056724552483",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
+  },
+  {
+    "Id": 6,
+    "Username": "test_judge_639125058932776326",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
+  },
+  {
+    "Id": 7,
+    "Username": "test_judge_639125060933964609",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
+  },
+  {
+    "Id": 8,
+    "Username": "test_judge_639125062061692235",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
+  },
+  {
+    "Id": 9,
+    "Username": "test_judge_639125063711773041",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
+  },
+  {
+    "Id": 10,
+    "Username": "test_judge_639125070140332326",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
+  },
+  {
+    "Id": 11,
+    "Username": "test_judge_639125071092385664",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
+  },
+  {
+    "Id": 12,
+    "Username": "test_judge_639125075032991309",
+    "PasswordHash": "724936cd9b665b34b178904d938970b9fffede7f6fcbae3e0f61b87170c06feb",
+    "Role": 1
+  }
+]

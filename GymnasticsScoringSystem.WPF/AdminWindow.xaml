@@ -1,0 +1,138 @@
+﻿<Window x:Class="GymnasticsScoringSystem.WPF.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Панель администратора" 
+        Height="500" Width="600"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Панель администратора" 
+                       FontSize="18" 
+                       FontWeight="Bold"
+                       AutomationProperties.AutomationId="txtAdminTitle"/>
+            <TextBlock x:Name="lblWelcome" 
+                       Foreground="Gray"
+                       Margin="0,5,0,0"
+                       AutomationProperties.AutomationId="lblWelcome"/>
+        </StackPanel>
+
+        <!-- Основное содержимое -->
+        <TabControl Grid.Row="1" AutomationProperties.AutomationId="tabControl">
+            <!-- Вкладка: Управление голосованием -->
+            <TabItem Header="Голосование" AutomationProperties.AutomationId="tabVoting">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Управление сессией оценивания" 
+                               FontWeight="Bold" 
+                               Margin="0,0,0,10"
+                               AutomationProperties.AutomationId="txtVotingTitle"/>
+
+                    <Button x:Name="btnStartVoting" 
+                            Content="Начать голосование" 
+                            Click="btnStartVoting_Click"
+                            Height="35"
+                            Margin="0,0,0,10"
+                            Background="LightGreen"
+                            AutomationProperties.AutomationId="btnStartVoting"/>
+
+                    <Button x:Name="btnStopVoting" 
+                            Content="Завершить голосование" 
+                            Click="btnStopVoting_Click"
+                            Height="35"
+                            Margin="0,0,0,10"
+                            Background="LightCoral"
+                            IsEnabled="False"
+                            AutomationProperties.AutomationId="btnStopVoting"/>
+
+                    <TextBlock x:Name="lblVotingStatus" 
+                               Text="Статус: Ожидание"
+                               Margin="0,10,0,0"
+                               AutomationProperties.AutomationId="lblVotingStatus"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Вкладка: Управление судьями -->
+            <TabItem Header="Судьи" AutomationProperties.AutomationId="tabJudges">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Создание нового аккаунта судьи" 
+                               FontWeight="Bold" 
+                               Margin="0,0,0,10"
+                               AutomationProperties.AutomationId="txtCreateJudgeTitle"/>
+
+                    <TextBlock Text="Имя пользователя:" 
+                               Margin="0,0,0,5"
+                               AutomationProperties.AutomationId="lblNewJudgeUsername"/>
+                    <TextBox x:Name="txtNewJudgeUsername" 
+                             Margin="0,0,0,10" 
+                             Height="25"
+                             AutomationProperties.AutomationId="txtNewJudgeUsername"/>
+
+                    <TextBlock Text="Пароль:" 
+                               Margin="0,0,0,5"
+                               AutomationProperties.AutomationId="lblNewJudgePassword"/>
+                    <PasswordBox x:Name="txtNewJudgePassword" 
+                                 Margin="0,0,0,10" 
+                                 Height="25"
+                                 AutomationProperties.AutomationId="txtNewJudgePassword"/>
+
+                    <Button x:Name="btnCreateJudge" 
+                            Content="Создать аккаунт судьи" 
+                            Click="btnCreateJudge_Click"
+                            Height="30"
+                            Margin="0,0,0,10"
+                            AutomationProperties.AutomationId="btnCreateJudge"/>
+
+                    <TextBlock x:Name="lblJudgeResult" 
+                               TextWrapping="Wrap"
+                               Margin="0,5,0,0"
+                               AutomationProperties.AutomationId="lblJudgeResult"/>
+
+                    <!-- Список судей -->
+                    <TextBlock Text="Зарегистрированные судьи:" 
+                               FontWeight="Bold" 
+                               Margin="0,20,0,5"
+                               AutomationProperties.AutomationId="lblJudgesList"/>
+                    <ListBox x:Name="lstJudges" 
+                             Height="100"
+                             AutomationProperties.AutomationId="lstJudges"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Вкладка: Результаты -->
+            <TabItem Header="Результаты" AutomationProperties.AutomationId="tabResults">
+                <StackPanel Margin="10">
+                    <Button x:Name="btnLoadResults" 
+                            Content="Загрузить результаты" 
+                            Click="btnLoadResults_Click"
+                            Height="30"
+                            Margin="0,0,0,10"
+                            AutomationProperties.AutomationId="btnLoadResults"/>
+
+                    <TextBox x:Name="txtResults" 
+                             IsReadOnly="True"
+                             VerticalScrollBarVisibility="Auto"
+                             Height="300"
+                             FontFamily="Consolas"
+                             AutomationProperties.AutomationId="txtResults"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <!-- Кнопка выхода -->
+        <Button Grid.Row="2" 
+                Content="Выйти" 
+                Click="btnLogout_Click"
+                HorizontalAlignment="Right"
+                Width="80"
+                Height="25"
+                Margin="0,10,0,0"
+                AutomationProperties.AutomationId="btnLogout"/>
+    </Grid>
+</Window>

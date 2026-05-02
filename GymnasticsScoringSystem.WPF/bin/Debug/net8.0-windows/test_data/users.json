@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "Username": "admin",
+    "PasswordHash": "a44ca5d29f6dab4320ab986479fa985b2d584b11a7da934f7e80bb1449913a07",
+    "Role": 0
+  },
+  {
+    "Id": 2,
+    "Username": "judge1",
+    "PasswordHash": "114d075c6ca11ca0a371a7292cb8a304ae23626481607e13fd845fac7bfc059c",
+    "Role": 1
+  },
+  {
+    "Id": 3,
+    "Username": "judge2",
+    "PasswordHash": "44626f6b299a1eb76db0f9c4ab79af4fa6aa7c413bfcebd312b38da03957f6f4",
+    "Role": 1
+  }
+]

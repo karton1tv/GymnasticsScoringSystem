@@ -1,0 +1,101 @@
+﻿<Window x:Class="GymnasticsScoringSystem.WPF.JudgeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ввод оценок - Судья" 
+        Height="450" Width="500"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Ввод оценок" 
+                       FontSize="18" 
+                       FontWeight="Bold"
+                       AutomationProperties.AutomationId="txtJudgeTitle"/>
+            <TextBlock x:Name="lblJudgeInfo" 
+                       Foreground="Gray"
+                       Margin="0,5,0,0"
+                       AutomationProperties.AutomationId="lblJudgeInfo"/>
+            <TextBlock x:Name="lblVotingStatus" 
+                       Foreground="Red"
+                       Margin="0,5,0,0"
+                       FontWeight="Bold"
+                       AutomationProperties.AutomationId="lblVotingStatus"/>
+        </StackPanel>
+
+        <!-- Форма ввода оценок -->
+        <StackPanel Grid.Row="1" VerticalAlignment="Top">
+            <TextBlock Text="ID выступления:" 
+                       Margin="0,0,0,5"
+                       AutomationProperties.AutomationId="lblPerformanceId"/>
+            <TextBox x:Name="txtPerformanceId" 
+                     Margin="0,0,0,15" 
+                     Height="25"
+                     Text="1"
+                     AutomationProperties.AutomationId="txtPerformanceId"/>
+
+            <TextBlock Text="ID бригады:" 
+                       Margin="0,0,0,5"
+                       AutomationProperties.AutomationId="lblBrigadeId"/>
+            <TextBox x:Name="txtBrigadeId" 
+                     Margin="0,0,0,15" 
+                     Height="25"
+                     Text="1"
+                     AutomationProperties.AutomationId="txtBrigadeId"/>
+
+            <TextBlock Text="Оценка (0.00 - 10.00):" 
+                       Margin="0,0,0,5"
+                       AutomationProperties.AutomationId="lblScore"/>
+            <TextBox x:Name="txtScore" 
+                     Margin="0,0,0,15" 
+                     Height="25"
+                     PreviewTextInput="txtScore_PreviewTextInput"
+                     AutomationProperties.AutomationId="txtScore"/>
+
+            <TextBlock Text="Допустимый разброс:" 
+                       Margin="0,0,0,5"
+                       AutomationProperties.AutomationId="lblMaxDeviation"/>
+            <TextBox x:Name="txtMaxDeviation" 
+                     Margin="0,0,0,15" 
+                     Height="25"
+                     Text="0.5"
+                     AutomationProperties.AutomationId="txtMaxDeviation"/>
+
+            <TextBlock Text="Штраф (если есть):" 
+                       Margin="0,0,0,5"
+                       AutomationProperties.AutomationId="lblPenalty"/>
+            <TextBox x:Name="txtPenalty" 
+                     Margin="0,0,0,20" 
+                     Height="25"
+                     Text="0.0"
+                     AutomationProperties.AutomationId="txtPenalty"/>
+
+            <Button x:Name="btnSubmitScore" 
+                    Content="Отправить оценку" 
+                    Click="btnSubmitScore_Click"
+                    Height="35"
+                    Background="LightBlue"
+                    AutomationProperties.AutomationId="btnSubmitScore"/>
+
+            <TextBlock x:Name="lblResult" 
+                       TextWrapping="Wrap"
+                       Margin="0,10,0,0"
+                       AutomationProperties.AutomationId="lblResult"/>
+        </StackPanel>
+
+        <!-- Кнопка выхода -->
+        <Button Grid.Row="2" 
+                Content="Выйти" 
+                Click="btnLogout_Click"
+                HorizontalAlignment="Right"
+                Width="80"
+                Height="25"
+                AutomationProperties.AutomationId="btnLogout"/>
+    </Grid>
+</Window>
