@@ -47,7 +47,7 @@ jobs:
         run: |
           # Извлекаем процент покрытия из XML-отчёта
           $xml = [xml](Get-Content ./coverage/**/coverage.cobertura.xml)
-          $lineRate = $xml.coverage.line-rate
+          $lineRate = $xml.coverage.'line-rate'
           $coveragePercent = [math]::Round($lineRate * 100, 2)
           
           Write-Host "Покрытие кода: $coveragePercent%"
