@@ -7,9 +7,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  # ==========================================================
   # СТАДИЯ 1: test (Сборка, тесты, покрытие)
-  # ==========================================================
   test:
     runs-on: windows-latest
     steps:
@@ -24,8 +22,9 @@ jobs:
       - name: Скачать библиотеки
         run: dotnet restore
 
-      - name: Собрать решение
-        run: dotnet build --no-restore --configuration Release
+      - name: Собрать решение (Debug для покрытия)
+        run: dotnet build --no-restore
+        # Примечание: используем Debug (по умолчанию) для корректной работы Coverlet
 
       - name: Запустить тесты с покрытием (исключая UI-тесты)
         run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage --filter "FullyQualifiedName!~UiAutomationTests"
@@ -45,18 +44,20 @@ jobs:
 
       - name: Проверить порог покрытия
         run: |
-          # 1. Находим XML-файл с покрытием
+          # Находим XML-файл с покрытием
           $coverageFile = Get-ChildItem -Path ./coverage -Recurse -Filter "coverage.cobertura.xml" | Select-Object -First 1
           if ($null -eq $coverageFile) {
             Write-Error "Файл coverage.cobertura.xml не найден!"
             exit 1
           }
           
-          # 2. Читаем и парсим XML
+          Write-Host "Найден файл: $($coverageFile.FullName)"
+          
+          # Читаем и парсим XML
           $content = Get-Content $coverageFile.FullName -Raw -Encoding UTF8
           $xml = [xml]$content
           
-          # 3. Извлекаем line-rate надёжным способом
+          # Извлекаем line-rate (используем GetAttribute для свойств с дефисом)
           $lineRate = $xml.coverage.GetAttribute('line-rate')
           
           # Если атрибут пустой или равен 0, вычисляем вручную
@@ -73,7 +74,7 @@ jobs:
           $coveragePercent = [math]::Round([double]$lineRate * 100, 2)
           Write-Host "Покрытие кода: $coveragePercent%"
           
-          # 4. Проверка порога (снижен до 35% для WPF-проекта без UI-тестов)
+          # Порог 35% (адекватно для WPF без UI-тестов в CI)
           $threshold = 35
           if ($coveragePercent -lt $threshold) {
             Write-Error "Покрытие кода ($coveragePercent%) ниже порога $threshold%!"
@@ -82,9 +83,7 @@ jobs:
           Write-Host "Покрытие кода соответствует порогу ($threshold%)!"
         shell: pwsh
 
-  # ==========================================================
   # СТАДИЯ 2: integration (Интеграционные тесты)
-  # ==========================================================
   integration:
     runs-on: windows-latest
     needs: test
@@ -101,14 +100,12 @@ jobs:
         run: dotnet restore
 
       - name: Собрать решение
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build --no-restore
 
       - name: Запустить интеграционные тесты (исключая UI-тесты)
         run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal --filter "FullyQualifiedName!~UiAutomationTests"
 
-  # ==========================================================
   # СТАДИЯ 3: report (Публикация отчётов)
-  # ==========================================================
   report:
     runs-on: windows-latest
     needs: integration
@@ -125,7 +122,7 @@ jobs:
         run: dotnet restore
 
       - name: Собрать решение
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build --no-restore
 
       - name: Запустить тесты с покрытием для финального отчёта
         run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --collect:"XPlat Code Coverage" --results-directory ./coverage --filter "FullyQualifiedName!~UiAutomationTests"
