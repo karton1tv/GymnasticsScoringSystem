@@ -1,0 +1,88 @@
+name: CI/CD Pipeline - Gymnastics Scoring System
+
+# Запускать пайплайн при каждом сохранении кода (push) 
+# и при создании запроса на проверку (pull request)
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  # ==========================================================
+  # СТАДИЯ 1: test (Сборка, проверка стиля, юнит-тесты ЛР №4)
+  # ==========================================================
+  test:
+    runs-on: windows-latest 
+    steps:
+      - name: Скачать код из репозитория
+        uses: actions/checkout@v4
+
+      - name: Установить .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Скачать все библиотеки (NuGet)
+        run: dotnet restore
+
+      - name: Собрать решение
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Запустить тесты (ЛР №4 и общие)
+        run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal
+
+  # ==========================================================
+  # СТАДИЯ 2: integration (Интеграционные тесты ЛР №5)
+  # ==========================================================
+  integration:
+    runs-on: windows-latest
+    needs: test # Робот не начнёт эту стадию, пока не закончится test
+    steps:
+      - name: Скачать код из репозитория
+        uses: actions/checkout@v4
+
+      - name: Установить .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Скачать все библиотеки (NuGet)
+        run: dotnet restore
+
+      - name: Собрать решение
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Запустить интеграционные тесты (ЛР №5)
+        run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal
+
+  # ==========================================================
+  # СТАДИЯ 3: report (Покрытие кода и сохранение отчётов)
+  # ==========================================================
+  report:
+    runs-on: windows-latest
+    needs: integration 
+    steps:
+      - name: Скачать код из репозитория
+        uses: actions/checkout@v4
+
+      - name: Установить .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Скачать все библиотеки (NuGet)
+        run: dotnet restore
+
+      - name: Собрать решение
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Запустить тесты с подсчётом покрытия
+        run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --collect:"XPlat Code Coverage" --results-directory ./coverage
+
+      - name: Сохранить отчёт о покрытии как артефакт
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage-report
+          path: ./coverage/
+        if: always() 
