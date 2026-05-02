@@ -45,8 +45,18 @@ jobs:
 
       - name: Проверить порог покрытия (70%)
         run: |
+          # Находим первый XML файл с покрытием
+          $coverageFile = Get-ChildItem -Path ./coverage -Recurse -Filter "coverage.cobertura.xml" | Select-Object -First 1
+          
+          if ($null -eq $coverageFile) {
+            Write-Error "Файл coverage.cobertura.xml не найден!"
+            exit 1
+          }
+          
+          Write-Host "Найден файл: $($coverageFile.FullName)"
+          
           # Извлекаем процент покрытия из XML-отчёта
-          $xml = [xml](Get-Content ./coverage/**/coverage.cobertura.xml)
+          $xml = [xml](Get-Content $coverageFile.FullName -Encoding UTF8)
           $lineRate = $xml.coverage.'line-rate'
           $coveragePercent = [math]::Round($lineRate * 100, 2)
           
