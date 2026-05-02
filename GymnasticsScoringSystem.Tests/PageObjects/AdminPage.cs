@@ -24,7 +24,7 @@ namespace GymnasticsScoringSystem.Tests.PageObjects
             _window = window;
         }
 
-        // Метод: начать голосование
+        // Метод:начать голосование
         public void StartVoting()
         {
             var button = _window.FindFirstDescendant(cf => cf.ByAutomationId(_startVotingButtonId));

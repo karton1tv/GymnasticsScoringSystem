@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{2D28C3EC-9DC2-43D9-9027-024B539F41C4}|GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj|solutionrelative:gymnasticsscoringsystem.tests\\pageobjects\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2D28C3EC-9DC2-43D9-9027-024B539F41C4}|GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj|c:\\un\\8 sem\\\u043F\u043E\u043A\u043F\u043E (\u0434\u0437) - \u043F\u0435\u0441\u0442\u0438\u043D\\\u043B\u0440\\9\u043B\u0440\\prog\\gymnasticsscoringsystem.wpf_9lr_2zadan\\gymnasticsscoringsystem.tests\\pageobjects\\judgepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D28C3EC-9DC2-43D9-9027-024B539F41C4}|GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj|solutionrelative:gymnasticsscoringsystem.tests\\pageobjects\\judgepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D28C3EC-9DC2-43D9-9027-024B539F41C4}|GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj|c:\\un\\8 sem\\\u043F\u043E\u043A\u043F\u043E (\u0434\u0437) - \u043F\u0435\u0441\u0442\u0438\u043D\\\u043B\u0440\\9\u043B\u0440\\prog\\gymnasticsscoringsystem.wpf_9lr_2zadan\\gymnasticsscoringsystem.tests\\stepdefinitions\\passwordpolicysteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D28C3EC-9DC2-43D9-9027-024B539F41C4}|GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj|solutionrelative:gymnasticsscoringsystem.tests\\stepdefinitions\\passwordpolicysteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -74,11 +78,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JudgePage.cs",
+              "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\PageObjects\\JudgePage.cs",
+              "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\PageObjects\\JudgePage.cs",
+              "ToolTip": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\PageObjects\\JudgePage.cs",
+              "RelativeToolTip": "GymnasticsScoringSystem.Tests\\PageObjects\\JudgePage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T08:10:10.856Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -88,14 +105,14 @@
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\PageObjects\\AdminPage.cs",
               "ToolTip": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\PageObjects\\AdminPage.cs",
               "RelativeToolTip": "GymnasticsScoringSystem.Tests\\PageObjects\\AdminPage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-02T08:09:54.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PasswordPolicySteps.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\StepDefinitions\\PasswordPolicySteps.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\StepDefinitions\\PasswordPolicySteps.cs",
@@ -103,12 +120,11 @@
               "RelativeToolTip": "GymnasticsScoringSystem.Tests\\StepDefinitions\\PasswordPolicySteps.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAkwAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T22:46:41.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T22:46:41.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UiAutomationTests.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\UiAutomationTests.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\UiAutomationTests.cs",
@@ -116,12 +132,11 @@
               "RelativeToolTip": "GymnasticsScoringSystem.Tests\\UiAutomationTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAArwBEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T03:48:58.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T03:48:58.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AdminSteps.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\StepDefinitions\\AdminSteps.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\StepDefinitions\\AdminSteps.cs",
@@ -129,12 +144,11 @@
               "RelativeToolTip": "GymnasticsScoringSystem.Tests\\StepDefinitions\\AdminSteps.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAjwHQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T23:16:36.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T23:16:36.087Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GymnasticsScoringSystem.Tests.csproj",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj",
@@ -142,12 +156,11 @@
               "RelativeToolTip": "GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-22T21:56:51.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T21:56:51.744Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AdminManagement.feature",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\Features\\AdminManagement.feature",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\Features\\AdminManagement.feature",
@@ -159,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ScoreSubmission.feature",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\Features\\ScoreSubmission.feature",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\Features\\ScoreSubmission.feature",
@@ -171,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PasswordPolicy.feature",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\Features\\PasswordPolicy.feature",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\Features\\PasswordPolicy.feature",
@@ -183,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ScoreSubmissionSteps.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\StepDefinitions\\ScoreSubmissionSteps.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\StepDefinitions\\ScoreSubmissionSteps.cs",
@@ -195,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ScoreRecord.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\Models\\ScoreRecord.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.WPF\\Models\\ScoreRecord.cs",
@@ -207,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\Models\\User.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.WPF\\Models\\User.cs",
@@ -219,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ScoringService.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\Services\\ScoringService.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.WPF\\Services\\ScoringService.cs",
@@ -231,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\Services\\UserRepository.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.WPF\\Services\\UserRepository.cs",
@@ -243,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\Services\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.WPF\\Services\\AuthenticationService.cs",
@@ -255,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AdminWindow.xaml",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\AdminWindow.xaml",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.WPF\\AdminWindow.xaml",
@@ -266,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "PasswordPolicyTests.cs",
               "DocumentMoniker": "C:\\un\\8 sem\\\u041F\u041E\u041A\u041F\u041E (\u0414\u0417) - \u041F\u0435\u0441\u0442\u0438\u043D\\\u041B\u0420\\9\u041B\u0420\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\PasswordPolicyTests.cs",
               "RelativeDocumentMoniker": "GymnasticsScoringSystem.Tests\\PasswordPolicyTests.cs",
