@@ -24,7 +24,7 @@ jobs:
       - name:  Собрать решение
         run: dotnet build --no-restore --configuration Release
 
-      - name:  Запустить тесты (ИСКЛЮЧАЯ UI-тесты)
+      - name:  Запустить тесты
         run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal --filter "FullyQualifiedName!~UiAutomationTests"
 
   integration:
@@ -45,7 +45,7 @@ jobs:
       - name:  Собрать решение
         run: dotnet build --no-restore --configuration Release
 
-      - name:  Интеграционные тесты (ИСКЛЮЧАЯ UI-тесты)
+      - name:  Интеграционные тесты
         run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --verbosity normal --filter "FullyQualifiedName!~UiAutomationTests"
 
   report:
@@ -66,7 +66,7 @@ jobs:
       - name: Собрать решение
         run: dotnet build --no-restore --configuration Release
 
-      - name: Тесты с покрытием (ИСКЛЮЧАЯ UI-тесты)
+      - name: Тесты с покрытием
         run: dotnet test GymnasticsScoringSystem.Tests/GymnasticsScoringSystem.Tests.csproj --no-build --collect:"XPlat Code Coverage" --results-directory ./coverage --filter "FullyQualifiedName!~UiAutomationTests"
 
       - name: Сохранить отчёт
