@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "13Jc5Y8GYIE=",
+  "dgSpecHash": "7barfxiFwKM=",
   "success": true,
-  "projectFilePath": "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\8ЛР\\Prog\\GymnasticsScoringSystem.WPF_full_work\\GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj",
+  "projectFilePath": "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\9ЛР\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.Tests\\GymnasticsScoringSystem.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus ZenBook\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Asus ZenBook\\.nuget\\packages\\cucumber.cucumberexpressions\\17.1.0\\cucumber.cucumberexpressions.17.1.0.nupkg.sha512",

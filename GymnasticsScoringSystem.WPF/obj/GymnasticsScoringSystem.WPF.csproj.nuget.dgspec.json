@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\8ЛР\\Prog\\GymnasticsScoringSystem.WPF_full_work\\GymnasticsScoringSystem.WPF\\GymnasticsScoringSystem.WPF.csproj": {}
+    "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\9ЛР\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\GymnasticsScoringSystem.WPF.csproj": {}
   },
   "projects": {
-    "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\8ЛР\\Prog\\GymnasticsScoringSystem.WPF_full_work\\GymnasticsScoringSystem.WPF\\GymnasticsScoringSystem.WPF.csproj": {
+    "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\9ЛР\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\GymnasticsScoringSystem.WPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\8ЛР\\Prog\\GymnasticsScoringSystem.WPF_full_work\\GymnasticsScoringSystem.WPF\\GymnasticsScoringSystem.WPF.csproj",
+        "projectUniqueName": "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\9ЛР\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\GymnasticsScoringSystem.WPF.csproj",
         "projectName": "GymnasticsScoringSystem.WPF",
-        "projectPath": "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\8ЛР\\Prog\\GymnasticsScoringSystem.WPF_full_work\\GymnasticsScoringSystem.WPF\\GymnasticsScoringSystem.WPF.csproj",
+        "projectPath": "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\9ЛР\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\GymnasticsScoringSystem.WPF.csproj",
         "packagesPath": "C:\\Users\\Asus ZenBook\\.nuget\\packages\\",
-        "outputPath": "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\8ЛР\\Prog\\GymnasticsScoringSystem.WPF_full_work\\GymnasticsScoringSystem.WPF\\obj\\",
+        "outputPath": "C:\\un\\8 sem\\ПОКПО (ДЗ) - Пестин\\ЛР\\9ЛР\\Prog\\GymnasticsScoringSystem.WPF_9LR_2zadan\\GymnasticsScoringSystem.WPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
